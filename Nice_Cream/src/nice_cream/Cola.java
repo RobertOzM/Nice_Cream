@@ -77,10 +77,10 @@ public class Cola {
     
     String imprimirRecursiva(Cliente n){
         if (n.siguiente == null) {
-            return n.nombre;
+            return n.nombre + " V-" + n.cedula;
                    
         }
-        return n.nombre + " --> " + imprimirRecursiva(n.siguiente);
+        return n.nombre + " V-" + n.cedula + " --> " + imprimirRecursiva(n.siguiente);
     }
 
 
