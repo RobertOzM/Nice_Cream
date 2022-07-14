@@ -76,12 +76,16 @@ public class Cola {
     }
     
     String imprimirRecursiva(Cliente n){
-        if (n.siguiente == null) {
-            return n.nombre + " V-" + n.cedula;
+        
+        if(isEmpty()){
+            return "No hay clientes en cola";
+        }
+        else if (n.siguiente == null) {
+            return n.nombre + " V-" + n.cedula;  
                    
         }
         return n.nombre + " V-" + n.cedula + " --> " + imprimirRecursiva(n.siguiente);
-    }
+    } 
 
 
 }

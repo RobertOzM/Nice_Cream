@@ -25,12 +25,12 @@ public class Nice_Cream {
         Cola c = new Cola();
         int opcion;
         int confirmacion;
-
+        c.read("Clientes.txt", c);
         do {
             System.out.println("");
             System.out.println(" -------------\t Heladeria Nice Cream \t-------------");
             System.out.println(" ---- \t Abriendo tienda y esperando clientes! \t ----");
-            c.read("Clientes.txt", c);
+            
             System.out.println("");
             System.out.println(" ---- \t Clientes en cola! hora de atenderlos! \t ----");
 
@@ -45,9 +45,10 @@ public class Nice_Cream {
             switch (opcion) {
 
                 case 1:
+                       
                     break;
                 case 2:
-                    System.out.println("\t La cola de atencion es: // --> " + c.imprimirRecursiva(c.primero));
+                    System.out.println("\t --> " + c.imprimirRecursiva(c.primero));
                     break;
                 case 3:
 
