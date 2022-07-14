@@ -16,59 +16,48 @@ public class Nice_Cream {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.IOException
      */
+    @SuppressWarnings("empty-statement")
     public static void main(String[] args) throws IOException {
 
         Scanner leer = new Scanner(System.in);
         Cola c = new Cola();
         int opcion;
         int confirmacion;
-        
-    
-        System.out.println("");
-        System.out.println("------------- Heladeria Nice Cream -------------");
-        System.out.println(" ---  Abriendo tienda y esperando clientes! --- ");
-        c.read("Clientes.txt", c);
-        System.out.println("");
-        System.out.println("----- Clientes en cola! hora de atenderlos! ---- ");
 
-        System.out.println("------ Que accion te gustaria realizar?  ------");
-        System.out.println("");
-        System.out.println("1)---- Realizar una venta");
-        System.out.println("2)---- Observar linea de atencion");
-        System.out.println("3)---- Cerrar tienda");
-        System.out.println("4) --- Imprimir reporte de ventas");
-        
-        
-        opcion = leer.nextInt();
-        switch (opcion) {
-            
-            case 1:
-                break;
-            case 2:
-                System.out.println("La cola de atencion es: // --> " + c.imprimirRecursiva(c.primero));
-                break;
-            case 3:
-                System.out.println("Ya revisaste si habian clientes en cola??");
-                System.out.println("1---Si, todos los clientes de la cola han sido atendidos!");
+        do {
+            System.out.println("");
+            System.out.println(" -------------\t Heladeria Nice Cream \t-------------");
+            System.out.println(" ---- \t Abriendo tienda y esperando clientes! \t ----");
+            c.read("Clientes.txt", c);
+            System.out.println("");
+            System.out.println(" ---- \t Clientes en cola! hora de atenderlos! \t ----");
 
-                confirmacion = leer.nextInt();
-                switch (confirmacion) {
-                    case 1:
-                        System.out.println("Gracias por tu esfuerzo, hoy fue un buen dia de trabajo!!!!");
-                        break;
-                    case 2:
+            System.out.println(" ---- \t Que accion te gustaria realizar? \t ----");
+            System.out.println("");
+            System.out.println(" 1)---- \tRealizar una venta");
+            System.out.println(" 2)---- \tObservar linea de atencion");
+            System.out.println(" 3)---- \tImprimir reporte de ventas");
+            System.out.println(" 4)---- \tCerrar tienda");
 
-                        break;
-                }
-                break;
-            case 4:
-            default:
+            opcion = leer.nextInt();
+            switch (opcion) {
 
-        }
-        
+                case 1:
+                    break;
+                case 2:
+                    System.out.println("\t La cola de atencion es: // --> " + c.imprimirRecursiva(c.primero));
+                    break;
+                case 3:
 
+                    break;
+                case 4:
+                    System.out.println("\t Gracias por tu esfuerzo! hoy fue un gran dia de trabajo");
+                    break;
+                default:
+            }
+        } while (opcion != 4);
     }
 
 }
-
