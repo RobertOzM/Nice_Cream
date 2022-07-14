@@ -10,14 +10,18 @@ package nice_cream;
  * @author Gabo
  */
 public class porcion {
-    
-    
     String sabor;
-    int precio;
+   
     porcion sig;
     
-    
- 
+        public porcion(String agregado){
+            sabor = agregado;
+            sig = null;
+            
+           
+            
+        }
+       
 }
 
     
